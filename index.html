@@ -1,16 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + React</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDrink</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<body class="bg-white">
+  <nav class="bg-white shadow px-4 py-2">
+    <ul class="flex gap-4 text-lg">
+      <li><a href="index.html" class="hover:underline">Inicio</a></li>
+      <li><a href="servicios.html" class="hover:underline">Servicios</a></li>
+      <li><a href="productos.html" class="hover:underline">Productos</a></li>
+      <li><a href="nosotros.html" class="hover:underline">Nosotros</a></li>
+    </ul>
+  </nav>
+  <header class="relative overflow-hidden bg-white">
+    <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+      <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+        <div class="sm:max-w-lg">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Cambiando la manera de preparar bebidas.
+          </h1>
+          <p class="mt-6 text-xl text-gray-500 text-justify">
+            Comprometidos con la innovaci&oacute;n, creatividad y servicio para que puedas brindar
+            la mejor experiencia a tus clientes con un estilo original. Con nuestra app m&oacute;vil tus clientes podr&aacute;n pedir su bebida preferida, personalizarla y pagarla desde su celular.
+          </p>
+        </div>
+        <div class="mt-10">
+          <a href="#servicios" class="inline-block rounded-md border border-transparent bg-black px-8 py-3 text-center font-medium text-white hover:bg-white hover:text-black hover:border-black">Conocer servicios</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <section class="relative overflow-hidden bg-white">
+    <div class="pb-10 pt-16 sm:pb-40 sm:pt-24 lg:pb-12 lg:pt-12">
+      <div class="flex flex-col gap-4 md:flex-row-reverse justify-between relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+        <div class="sm:max-w-lg">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">Drinker.</h1>
+          <p class="mt-6 text-xl text-slate-500 text-justify">Conoce nuestro producto!</p>
+          <p class="mt-6 text-xl text-slate-900 text-justify">Te presentamos nuestro innovador producto, dise&ntilde;ado especialmente para satisfacer tus necesidades y superar tus expectativas. Un dispositivo que combina funcionalidad, elegancia y rendimiento excepcionales en un solo paquete. &iquest;Quieres destacar entre la multitud? Con nuestro producto podr&aacute;s hacerlo. No pierdas la oportunidad de adquirir este incre&iacute;ble producto y adquiere tu Plan SmartDrink.</p>
+        </div>
+        <div>
+          <img src="src/assets/bannert.png" alt="Banner" class="rounded-lg shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font max-w-[1200px] mx-auto py-12">
+    <div class="container mx-auto flex px-5 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 md:text-5xl">Descarga SmartDrink</h1>
+        <p class="mb-8 leading-relaxed md:text-3xl">Descarga SmartDrink escaneando este c&oacute;digo QR y empieza a pedir, personalizar tus bebidas como nunca antes.</p>
+        <img src="src/assets/QR.png" alt="QR" class="w-52" />
+      </div>
+      <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl md:rotate-12">
+        <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+        <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+        <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white">
+          <img src="src/assets/AppModelo.jpg" class="w-[272px] h-[572px]" alt="App" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-white body-font bg-black">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">NUESTRO EQUIPO</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">Equipo JavaTec</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/2">
+          <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="src/assets/perfil-miguel.jpeg" />
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Miguel &Aacute;ngel Chan V.</h2>
+              <h3 class="text-gray-500 mb-3">L&iacute;der de proyecto</h3>
+              <p class="text-justify text-sm">Encargado de planificar, direccionar y supervisar el proceso de desarrollo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2">
+          <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="src/assets/perfil-roberto.jpeg" />
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Roberto Adri&aacute;n Miranda M.</h2>
+              <h3 class="text-gray-500 mb-3">Desarrollador</h3>
+              <p class="text-justify text-sm">Encargado de la creaci&oacute;n de c&oacute;digo limpio y eficiente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
-
 </html>
