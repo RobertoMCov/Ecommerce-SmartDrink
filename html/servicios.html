@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDrink - Servicios</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white">
+  <!-- Navbar -->
+  <!--#include file="navbar.html" -->
+
+  <!-- Pricing Section -->
+  <section>
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <h1 class="text-center text-3xl font-semibold mb-8">Planes SmartDrink</h1>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="border rounded-xl p-6 flex flex-col">
+          <h3 class="text-xl font-semibold">SmartBasic</h3>
+          <p class="mt-2 text-gray-600">Paquete inicial con instalación y tutoriales.</p>
+          <p class="mt-4 text-4xl font-bold">$29,999 <span class="text-base font-medium">MXN</span></p>
+          <a href="checkout.html" class="mt-6 block text-center bg-black text-white rounded-lg py-2 hover:bg-white hover:text-black border hover:border-black">Comprar</a>
+        </div>
+        <div class="border rounded-xl p-6 flex flex-col bg-black text-white">
+          <h3 class="text-xl font-semibold">SmartInter</h3>
+          <p class="mt-2">Capacitación completa y soporte remoto.</p>
+          <p class="mt-4 text-4xl font-bold">$36,999 <span class="text-base font-medium">MXN</span></p>
+          <a href="checkout.html" class="mt-6 block text-center bg-white text-black rounded-lg py-2 hover:bg-black hover:text-white border-white">Comprar</a>
+        </div>
+        <div class="border rounded-xl p-6 flex flex-col">
+          <h3 class="text-xl font-semibold">SmartPro</h3>
+          <p class="mt-2 text-gray-600">Diseño personalizado y soporte 24/7.</p>
+          <p class="mt-4 text-4xl font-bold">$49,999 <span class="text-base font-medium">MXN</span></p>
+          <a href="checkout.html" class="mt-6 block text-center bg-black text-white rounded-lg py-2 hover:bg-white hover:text-black border hover:border-black">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-medium mb-4">Descarga SmartDrink</h2>
+        <p class="text-gray-600 mb-6">Escanea el código QR y comienza a personalizar tus bebidas.</p>
+        <img src="../src/assets/QR.png" alt="QR" class="w-32">
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="../src/assets/AppModelo.jpg" alt="App" class="rounded-xl shadow-lg w-60">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!--#include file="footer.html" -->
+</body>
+</html>
