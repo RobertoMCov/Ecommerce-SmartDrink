@@ -1,16 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + React</title>
+  <title>SmartDrink</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+<body class="bg-white">
+  <!-- Navbar -->
+  <header class="py-4 bg-white relative z-50">
+    <div class="flex items-center justify-between px-4 max-w-[1200px] mx-auto">
+      <ul class="gap-4 hidden text-lg lg:flex">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/productos">Productos</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+      </ul>
+      <a href="/">
+        <img src="src/assets/Logo.png" class="hidden h-14 lg:block" alt="Logo" />
+        <img src="src/assets/Logo-mobile.png" class="h-14 lg:hidden" alt="Logo" />
+      </a>
+      <div class="flex items-center gap-4">
+        <div class="hidden items-center lg:flex">
+          <label for="simple-search" class="sr-only">Buscar</label>
+          <div class="relative w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
+            </div>
+            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Buscar" />
+          </div>
+          <button class="p-2.5 ml-2 text-sm font-medium text-white bg-black rounded-lg border hover:scale-105">
+            <svg class="w-5 h-5" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            <span class="sr-only">Search</span>
+          </button>
+        </div>
+        <a href="/cart" class="relative inline-flex items-center py-2.5 text-sm font-medium text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+          </svg>
+          <span class="sr-only">Cart</span>
+        </a>
+        <a href="/login" class="relative inline-flex items-center py-2.5 text-sm font-medium text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span class="sr-only">Profile</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <!-- Promo -->
+  <div class="relative overflow-hidden bg-white">
+    <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+      <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+        <div class="sm:max-w-lg">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Cambiando la manera de preparar bebidas.
+          </h1>
+          <p class="mt-6 text-xl text-gray-500 text-justify">
+            Comprometidos con la innovación, creatividad y servicio para que puedas brindar
+            la mejor experiencia a tus clientes con un estilo original. <br/><br/>Con nuestra app móvil tu clientes podrán pedir su bebida preferida, personalizarla y pagarla desde su celular .
+          </p>
+        </div>
+        <div>
+          <div class="mt-10">
+            <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+              <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                <div class="flex items-center space-x-6 lg:space-x-8">
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                      <img src="https://www.cocteleria.com.mx/2017/wp-content/uploads/2018/01/coctel.png" alt="" class="h-full object-cover object-center rotate-12" />
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://asianbistro.mx/upload/platillos/bebidas/ancho-maracuya.png" alt="" class="h-full w-full object-cover object-center -rotate-12" />
+                    </div>
+                  </div>
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://style.shockvisual.net/wp-content/uploads/2021/05/mezcal.png" alt="" class="h-full w-full object-cover object-center" />
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://www.alcossebrehotel.com/wp-content/uploads/2022/03/tropical.png" alt="" class="h-full w-full object-cover object-center" />
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://i.pinimg.com/originals/b9/db/1a/b9db1ae0c2df52def3e0e029fd9d9da3.png" alt="" class="h-full w-full object-cover object-center" />
+                    </div>
+                  </div>
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://i.pinimg.com/originals/f0/82/c1/f082c1fd98314d3054c9345f3d34a593.png" alt="" class="h-full w-full object-cover object-center" />
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://asianbistro.mx/upload/platillos/bebidas/mezcal-jamaica.png" alt="" class="h-full w-full object-cover object-center -rotate-12" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/servicios" class="inline-block rounded-md border border-transparent bg-black px-8 py-3 text-center font-medium text-white hover:bg-white hover:text-black hover:border-black">Conocer servicios</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner Three -->
+  <div class="relative overflow-hidden bg-white">
+    <div class="pb-10 pt-16 sm:pb-40 sm:pt-24 lg:pb-12 lg:pt-12">
+      <div class="flex flex-col gap-4 md:flex-row-reverse justify-between relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+        <div class="sm:max-w-lg">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">Drinker.</h1>
+          <p class="mt-6 text-xl text-slate-500 text-justify">Conoce nuestro producto!</p>
+          <p class="mt-6 text-xl text-slate-900 text-justify">Te presentamos nuestro innovador producto, diseñado especialmente para satisfacer tus necesidades y superar tus expectativas, Un dispositivo que combina funcionalidad, elegancia y rendimiento excepcionales en un solo paquete.  ¿Quieres destacar entre la multitud? Con nuestro producto, podrás hacerlo. No pierdas la oportunidad de adquirir este increíble producto y adquiere tu Plan SmartDrink.</p>
+        </div>
+        <div>
+          <img src="src/assets/bannert.png" alt="" class="rounded-lg shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing -->
+  <section>
+    <div class="relative items-center w-full mx-auto md:px-12 lg:px-16 max-w-7xl">
+      <div>
+        <h1 class="text-center text-3xl font-semibold mt-10 md:text-4xl">Selecciona tu plan SmartDrink</h1>
+        <div class="relative p-10 space-y-12 overflow-hidden lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8 rounded-xl">
+          <!-- Plan 1 -->
+          <div class="relative flex flex-col p-8 bg-white border rounded-xl">
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-neutral-600">SmartBasic</h3>
+              <p class="flex items-baseline mt-4 text-neutral-600">
+                <span class="text-5xl font-bold tracking-tight">$29,999</span>
+                <span class="ml-1 text-xl font-semibold">MXN</span>
+              </p>
+              <p class="mt-6 text-gray-500 text-justify">Con el paquete SmartBasic tendrás acceso a tutoriales detallados para un mejor manejo de tu Drinker y soporte básico para dudas o preguntas.</p>
+              <ul role="list" class="pt-6 mt-6 space-y-6 border-t">
+                <span class="text-lg font-semibold text-neutral-600">¿Qué incluye?</span>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Instalación básica del modelo de dispensador de bebidas automatizado.</span></li>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Tutoriales detallados sobre el manejo y uso de los dispositivos.</span></li>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Soporte técnico básico.</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 rounded-lg">
+              <a href="/checkout/9200/SmartBasic" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black">Comprar ahora</a>
+            </div>
+          </div>
+          <!-- Plan 2 -->
+          <div class="relative flex flex-col p-8 bg-black border rounded-2xl">
+            <div class="relative flex-1">
+              <h3 class="text-xl font-semibold text-white">SmartInter</h3>
+              <p class="flex items-baseline mt-4 text-white">
+                <span class="text-5xl font-bold tracking-tight text-white">$36,999</span>
+                <span class="ml-1 text-xl font-semibold text-white">MXN</span>
+              </p>
+              <p class="mt-6 text-white text-solitud line-clamp-5 text-justify">Con el paquete SmartInter obtendrás la capacitación completa para el personal, de esta manera se tendrá  un mejor funcionamiento y durabilidad del Drinker.</p>
+              <ul role="list" class="pt-6 mt-6 space-y-6 border-t">
+                <span class="text-lg font-semibold text-white">¿Qué incluye?</span>
+                <li class="flex"><div class="inline-flex items-center w-6 h-6 bg-white rounded-xl"><svg class="flex-shrink-0 w-4 h-4 mx-auto text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-white">Instalación básica del modelo de dispensador de bebidas automatizado.</span></li>
+                <li class="flex"><div class="inline-flex items-center w-6 h-6 bg-white rounded-xl"><svg class="flex-shrink-0 w-4 h-4 mx-auto text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-white">Capacitación completa del personal en el manejo y uso de la aplicación así como del dispositivo.</span></li>
+                <li class="flex"><div class="inline-flex items-center w-6 h-6 bg-white rounded-xl"><svg class="flex-shrink-0 w-4 h-4 mx-auto text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-white">Soporte remoto para resolver cualquier duda o problema.</span></li>
+                <li class="flex"><div class="inline-flex items-center w-6 h-6 bg-white rounded-xl"><svg class="flex-shrink-0 w-4 h-4 mx-auto text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-white">Actualizaciones gratuitas para mejorar y agregar nuevas funcionalidades.</span></li>
+              </ul>
+            </div>
+            <div class="z-50 mt-6 rounded-lg">
+              <a href="/checkout/11400/SmartInter" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black">Comprar ahora</a>
+            </div>
+          </div>
+          <!-- Plan 3 -->
+          <div class="relative flex flex-col p-8 bg-white border rounded-xl">
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-neutral-600">SmartPro</h3>
+              <p class="flex items-baseline mt-4 text-neutral-600">
+                <span class="text-5xl font-bold tracking-tight">$49,999</span>
+                <span class="ml-1 text-xl font-semibold">MXN</span>
+              </p>
+              <p class="mt-6 text-gray-500 line-clamp-5 text-justify">Con el paquete SmartPro podrás elegir el diseño de tu preferencia para tu Drinker. Asi como capacitaciones completas al personal, Soporte técnico 24/7 más.</p>
+              <ul role="list" class="pt-6 mt-6 space-y-6 border-t">
+                <span class="text-lg font-semibold text-neutral-600">¿Qué incluye?</span>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Instalación personalizada con la posibilidad de elegir entre tres <a href="/">diseños</a> .</span></li>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Capacitación continúa y constante al personal.</span></li>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Creación de una página web personalizada para promocionar tus servicios al público.</span></li>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Soporte remoto 24/7 para asistir en cualquier momento.</span></li>
+                <li class="flex"><div class="inline-flex items-center bg-black rounded-xl w-6 h-6"><svg class="flex-shrink-0 w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div><span class="ml-3 text-neutral-600">Actualizaciones periódicas para mantenerte actualizado.</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 rounded-lg">
+              <a href="/checkout/13000/SmartPro" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black">Comprar ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Products -->
+  <div class="mt-20 flex flex-col md:flex-row md:gap-10 bg-black rounded-xl w-11/12 m-auto p-5 justify-center">
+    <div class="rounded-xl p-6 flex flex-col justify-center items-center">
+      <h1 class="text-white text-3xl md:text-6xl font-semibold text-center">Productos</h1>
+      <p class="text-white text-1xl font-sans mt-8 text-justify md:text-3xl w-60 md:w-auto lg:w-auto md:pl-10">Los mejores productos inteligentes para cambiar el ambiente donde te ubiques, encuentra los mejores precios solo en SmartDrink! Y disfruta de cada uno de ellos.</p>
+      <a href="/productos" class="w-40 mt-20 items-center block px-10 text-sm py-3.5 md:text-2xl md:w-80 font-semibold text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black">Comprar ahora</a>
+    </div>
+    <div class="flex justify-center items-center">
+      <a href="/productos"><img class="rounded-2xl w-40 md:w-auto" src="src/assets/carrito.png" alt="" /></a>
+    </div>
+  </div>
+
+  <!-- Promo Service -->
+  <div class="p-4 md:p-8 max-w-[1300px] mx-auto">
+    <div class="bg-white rounded-[2rem] md:rounded-[4rem] p-8 sm:flex sm:items-center md:p-12 sm:justify-center justify-items-center">
+      <div class="flex flex-col md:flex-row justify-center items-center">
+        <div class="flex flex-col items-center">
+          <h1 class="text-black text-2xl mb-3 md:text-3xl lg:text-4xl md:mb-8 font-semibold text-center">Promoción servicio de instalación</h1>
+          <a href="/productos"><img src="src/assets/promocion.gif" alt="" /></a>
+        </div>
+        <div class="flex flex-col">
+          <p class="text-black mb-6 text-1xl w-60 text-justify lg:text-2xl lg:w-auto md:w-auto md:mb-10">A partir de $1500 MXN en compra el servicio de instalación es <span class='text-red-600 font-bold'>GRATIS!</span> No te pierdas de esta gran promoción!</p>
+          <a href="/productos" class="w-80 items-center block px-10 py-3.5 text-base font-medium text-center text-white bg-black transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl hover:bg-white hover:border-black hover:text-black">Comprar ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Section -->
+  <section class="text-gray-600 body-font max-w-[1200px] mx-auto">
+    <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 md:text-5xl">Descarga SmartDrink</h1>
+        <p class="mb-8 leading-relaxed md:text-3xl">Descarga SmartDrink escaneando este codigo QR y empieza a pedir, personalizar tus bebidas como nunca antes.</p>
+        <img src="src/assets/QR.png" alt="" class="w-52" />
+      </div>
+      <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl md:rotate-12">
+        <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+        <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+        <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white">
+          <img src="src/assets/AppModelo.jpg" class="w-[272px] h-[572px]" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="text-white body-font bg-black">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">NUESTRO EQUIPO</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">Equipo JavaTec</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <!-- Member 1 -->
+        <div class="p-4 lg:w-1/2">
+          <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="src/assets/perfil-miguel.jpeg" />
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Miguel Ángel Chan V.</h2>
+              <h3 class="text-gray-500 mb-3">Lider de proyecto</h3>
+              <p class="text-justify text-sm">Encargado de planificar, direccionar, supervisar el proceso de construcción, implementación y eliminación de errores de códigos.</p>
+              <br><span class="inline-flex">
+                <a href="https://www.facebook.com/macv2002" target="_blank" class="text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg></a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- Member 2 -->
+        <div class="p-4 lg:w-1/2">
+          <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="src/assets/perfil-roberto.jpeg" />
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Roberto Adrián Miranda M.</h2>
+              <h3 class="text-gray-500 mb-3">Desarrollador</h3>
+              <p class="text-justify text-sm">Encargado de la creación de código limpio y eficiente, creación del software teniendo las necesidades del usuario, revisar el funcionamiento, realizar mapeo de software.</p>
+              <br><span class="inline-flex">
+                <a href="https://www.facebook.com/profile.php?id=100010329643690" target="_blank" class="text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg></a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- Member 3 -->
+        <div class="p-4 lg:w-1/2">
+          <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="src/assets/perfil-marco.jpeg" />
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">Marco Antonio Torres L.</h2>
+              <h3 class="text-gray-500 mb-3">Diseñador de interfaz de usuario</h3>
+              <p class="text-justify text-sm">Recopilación y evaluación de los requisitos de los usuarios, Ilustrar ideas de diseño con guiones gráficos, flujos de procesos y mapas de sitios.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Member 4 -->
+        <div class="p-4 lg:w-1/2">
+          <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="src/assets/perfil-luis.jpg" />
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-white">José Luis Oro C.</h2>
+              <h3 class="text-gray-500 mb-3">Diseñador</h3>
+              <p class="text-justify text-sm">Analizar las necesidades de los usuarios y luego diseñar, probar y desarrollar programas para cubrirlas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Two -->
+  <div class="p-4 md:p-8 max-w-[1200px] mx-auto">
+    <div class="bg-black rounded-[2rem] md:rounded-[4rem] p-8 sm:flex sm:items-center md:p-12 sm:justify-center">
+      <div class="md:w-6/12">
+        <h1 class="text-white text-3xl mb-4 lg:text-6xl md:mb-8">¿Por qué somos diferentes?</h1>
+        <p class="text-white mb-6 text-justify lg:text-2xl md:mb-10">Ofrecemos un servicio de calidad con 100% de garantía y un excelente servicio al cliente. En SmartDrink nos esforzamos para superar las expectativas de nuestros clientes.</p>
+        <a href="/nosotros" class="transition border bg-white w-full py-4 rounded-full hover:bg-black hover:text-white hover:border-white hover:scale-105 sm:w-auto sm:px-14">Conócenos</a>
+      </div>
+      <img src="https://s3.amazonaws.com/newamsterdamspirits.com/mooseassets2/s3fs-public/cocktail-images-2020/NEWAM_VodkaSoda_0.png?9YLc0W3c9F5_XKycu fHGvd3VfoNa20Ig" alt="" class="w-10/12 mx-auto sm:w-5/12 lg:w-4/12" />
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black lg:grid lg:grid-cols-5">
+    <div class="relative block h-32 lg:col-span-2 lg:h-full">
+      <img src="https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?cs=srgb&dl=pexels-isabella-mendes-340996.jpg&fm=jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+    </div>
+    <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2" id="basico">
+        <div>
+          <p>
+            <span class="text-xs uppercase tracking-wide text-white">¿Tienes dudas?</span>
+            <span class="block text-2xl font-medium text-white sm:text-3xl"><a href="/nosotros#Contacto">Contáctanos</a></span>
+          </p>
+          <ul class="mt-8 space-y-1 text-sm">
+            <li class="text-white">Lunes a Viernes de 10:00am a 05:00 pm</li>
+            <li class="text-white">Fin de semana : 11:00 am a 03:00 pm</li>
+          </ul>
+          <ul class="mt-8 flex gap-6">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100093851094281" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+                <span class="sr-only">Facebook</span>
+                <svg class="h-6 w-6" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/smartdrink__/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+                <span class="sr-only">Instagram</span>
+                <svg class="h-6 w-6" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.31.975.975 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.31-3.608C4.518 2.499 5.785 2.226 7.151 2.163 8.417 2.105 8.797 2.093 12 2.093zm0-2.163C8.756 0 8.332.013 7.052.072 5.775.132 4.607.415 3.513 1.509 2.42 2.603 2.137 3.771 2.077 5.048 2.019 6.328 2.006 6.752 2.006 12s.013 5.672.072 6.952c.06 1.277.343 2.445 1.437 3.539 1.094 1.094 2.262 1.377 3.539 1.437 1.28.059 1.704.072 6.952.072s5.672-.013 6.952-.072c1.277-.06 2.445-.343 3.539-1.437 1.094-1.094 1.377-2.262 1.437-3.539.059-1.28.072-1.704.072-6.952s-.013-5.672-.072-6.952c-.06-1.277-.343-2.445-1.437-3.539C20.693.415 19.525.132 18.248.072 16.968.013 16.544 0 12.001 0zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z" clip-rule="evenodd" /></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium text-white">Enlaces rápidos</p>
+          <ul class="mt-6 space-y-4 text-sm">
+            <li><a href="/" class="text-white transition hover:opacity-75">Inicio</a></li>
+            <li><a href="/servicios" class="text-white transition hover:opacity-75">Servicios</a></li>
+            <li><a href="/productos" class="text-white transition hover:opacity-75">Productos</a></li>
+            <li><a href="/nosotros" class="text-white transition hover:opacity-75">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium text-white">Nosotros</p>
+          <ul class="mt-6 space-y-4 text-sm">
+            <li><a href="/nosotros" class="text-white transition hover:opacity-75">Quienes somos</a></li>
+            <li><a href="/nosotros" class="text-white transition hover:opacity-75">Misión</a></li>
+            <li><a href="/nosotros" class="text-white transition hover:opacity-75">Visión</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-100 pt-4">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <p class="mt-8 text-xs text-gray-500 sm:mt-0">&copy; 2023. Javatec. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
-
 </html>
