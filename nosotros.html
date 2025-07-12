@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros - SmartDrink</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-white">
+    <!-- Navbar -->
+    <header class="py-4 bg-white relative z-50">
+        <div class="flex items-center justify-between px-4 max-w-[1200px] mx-auto">
+            <ul class="gap-4 hidden text-lg lg:flex">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/servicios">Servicios</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+            </ul>
+            <a href="/">
+                <img src="src/assets/Logo.png" class="hidden h-14 lg:block" alt="Logo" />
+                <img src="src/assets/Logo-mobile.png" class="h-14 lg:hidden" alt="Logo" />
+            </a>
+            <div class="flex items-center gap-4">
+                <div class="hidden items-center lg:flex">
+                    <label for="simple-search" class="sr-only">Buscar</label>
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <input type="text" id="simple-search"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                            placeholder="Buscar" />
+                    </div>
+                    <button
+                        class="p-2.5 ml-2 text-sm font-medium text-white bg-black rounded-lg border hover:scale-105">
+                        <svg class="w-5 h-5" fill="none" stroke="white" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <span class="sr-only">Search</span>
+                    </button>
+                </div>
+                <a href="/cart" class="relative inline-flex items-center py-2.5 text-sm font-medium text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path
+                            d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                    </svg>
+                    <span class="sr-only">Cart</span>
+                </a>
+                <a href="/login" class="relative inline-flex items-center py-2.5 text-sm font-medium text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span class="sr-only">Profile</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us -->
+    <section class="grid grid-cols-1 gap-0 bg-opacity-25 md:grid-cols-2">
+        <div class="flex flex-col items-start bg-black justify-center px-4 py-24 lg:px-20">
+            <span class="mb-4 p-2 px-4 rounded-xl bg-white badge text-black font-semibold">SmartDrink</span>
+            <h1 class="mb-6 text-4xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">¿Quiénes somos?</h1>
+            <p class="pr-0 mb-4 text-lg text-white tracking-relaxed text-justify lg:pr-16">Somos un equipo de jóvenes
+                desarrolladores que ofrecemos productos inteligentes a su disposición para mejorar el entorno en donde
+                se encuentren asi mismo buscamos facilitar y agilizar la preparación de bebidas con métodos
+                tecnológicos, ya que nuestro principal objetivo es lograr que nuestros clientes se posicionen entre los
+                mejores siendo distintos y destacando entre los demás.</p>
+        </div>
+        <div>
+            <img src="https://s1.1zoom.me/big0/126/Drinks_Strawberry_Cocktail_Black_background_548048_1280x893.jpg"
+                alt="" class="object-cover w-full h-64 md:h-full" loading="lazy" />
+        </div>
+    </section>
+    <section class="grid grid-cols-1 gap-0 bg-opacity-25 md:grid-cols-2">
+        <div class="order-2 md:order-1">
+            <img src="https://static7.depositphotos.com/1000589/717/i/600/depositphotos_7172080-stock-photo-mojito-cocktail-on-white-background.jpg"
+                alt="" class="object-cover w-full h-64 md:h-full" loading="lazy" />
+        </div>
+        <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20 order-1 md:order-2">
+            <h1 class="mb-6 text-4xl font-bold leading-tight text-black md:text-4xl lg:text-5xl">Misión </h1>
+            <p class="pr-0 mb-4 text-lg text-black tracking-relaxed text-justify lg:pr-24">Proporcionar a nuestros
+                clientes los mejores productos inteligentes y herramienta necesarias para cambiar y mejorar su
+                experiencia en la preparación de bebidas. Nos esforzamos para superar las expectativas de nuestros
+                clientes.</p>
+            <h1 class="mb-6 text-4xl font-bold leading-tight text-black md:text-4xl lg:text-5xl pt-10">Visión</h1>
+            <p class="pr-0 mb-4 text-lg text-black tracking-relaxed text-justify lg:pr-24">Ser reconocidos a nivel
+                nacional e internacional siendo diferentes a los demás, teniendo la mejor calidad posible, para ofrecer
+                nuestros servicios y productos de excelencia.</p>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="text-white body-font bg-black">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">NUESTRO EQUIPO</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">Equipo JavaTec </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 lg:w-1/2">
+                    <div
+                        class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team"
+                            class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                            src="src/assets/perfil-miguel.jpeg" />
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">Miguel Ángel Chan V.</h2>
+                            <h3 class="text-gray-500 mb-3">Lider de proyecto</h3>
+                            <p class="text-justify text-sm">Encargado de planificar, direccionar, supervisar el proceso
+                                de construcción, implementación y eliminación de errores de códigos.</p>
+                            <br><span class="inline-flex">
+                                <a href="https://www.facebook.com/macv2002" target="_blank" class="text-gray-500"><svg
+                                        fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                                    </svg></a>
+                                <a class="ml-2 text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                                    </svg></a>
+                                <a href="https://api.whatsapp.com/send/?phone=525564100068&text&app_absent=0"
+                                    class="ml-2 text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-whatsapp w-5 h-5 text-white"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div
+                        class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team"
+                            class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                            src="src/assets/perfil-roberto.jpeg" />
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">Roberto Adrián Miranda M.</h2>
+                            <h3 class="text-gray-500 mb-3">Desarrollador</h3>
+                            <p class="text-justify text-sm">Encargado de la creación de código limpio y eficiente ,
+                                creación del software teniendo las necesidades del usuario, revisar el funcionamiento,
+                                realizar mapeo de software trabajando en equipo con el equipo implicadas en el diseño.
+                            </p>
+                            <br><span class="inline-flex">
+                                <a href="https://www.facebook.com/profile.php?id=100010329643690" target="_blank"
+                                    class="text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                                    </svg></a>
+                                <a class="ml-2 text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                                    </svg></a>
+                                <a href="https://api.whatsapp.com/send/?phone=525564100068&text&app_absent=0"
+                                    class="ml-2 text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-whatsapp w-5 h-5 text-white"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div
+                        class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team"
+                            class="flex-shrink-0 rounded-full w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                            src="src/assets/perfil-marco.jpeg" />
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">Marco Antonio Torres L.</h2>
+                            <h3 class="text-gray-500 mb-3">Diseñador de interfaz de usuario</h3>
+                            <p class="text-justify text-sm">Recopilación y evaluación de los requisitos de los usuarios,
+                                Ilustrar ideas de diseño con guiones gráficos, flujos de procesos y mapas de sitios.</p>
+                            <br><span class="inline-flex">
+                                <a href="https://www.facebook.com/profile.php?id=100082778165701" target="_blank"
+                                    class="text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                                    </svg></a>
+                                <a class="ml-2 text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                                    </svg></a>
+                                <a href="" class="ml-2 text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-whatsapp w-5 h-5 text-white"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div
+                        class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team"
+                            class="flex-shrink-0 w-48 h-48 object-cover object-center sm:mb-0 mb-4 rounded-full"
+                            src="src/assets/perfil-luis.jpg" />
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">José Luis Oro C.</h2>
+                            <h3 class="text-gray-500 mb-3">Diseñador</h3>
+                            <p class="text-justify text-sm">Analizar las necesidades de los usuarios y luego diseñar,
+                                probar y desarrollar programas para cubrirlas.</p><br>
+                            <span class="inline-flex">
+                                <a href="" class="text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                                    </svg></a>
+                                <a class="ml-2 text-gray-500"><svg fill="none" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                                    </svg></a>
+                                <a href="" class="ml-2 text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-whatsapp w-5 h-5 text-white"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="Contacto" class="bg-white max-w-[1200px] mx-auto">
+        <div class="container px-6 py-12 mx-auto">
+            <div class="lg:flex lg:items-center lg:-mx-6">
+                <div class="lg:w-1/2 lg:mx-6">
+                    <h1 class="text-2xl font-semibold text-gray-800 lg:text-3xl">Contáctanos para <br /> más información
+                    </h1>
+                    <div class="mt-6 space-y-8 md:mt-8">
+                        <p class="flex items-start -mx-2">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span class="mx-2 text-gray-700 truncate w-72">Universidad Tecnológica de Nezahualcóyotl,
+                                Cto. Rey Nezahualcóyotl Manzana 010, Benito Juárez, 57000 Nezahualcóyotl, Méx.</span>
+                        </p>
+                        <p class="flex items-start -mx-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span class="mx-2 text-gray-700 truncate w-72">56-31-40-37-19</span>
+                        </p>
+                        <p class="flex items-start -mx-2">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span class="mx-2 text-gray-700 truncate w-72">smartdrinkk@gmail.com</span>
+                        </p>
+                    </div>
+                    <div class="mt-6 w-80 md:mt-8">
+                        <h3 class="text-gray-600">Síguenos en</h3>
+                        <div class="flex mt-4 -mx-1.5">
+                            <a target="_blank"
+                                class="mx-1.5 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
+                                href=""><svg class="w-10 h-10 fill-current" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.6668 6.67334C18.0002 7.00001 17.3468 7.13268 16.6668 7.33334C15.9195 6.49001 14.8115 6.44334 13.7468 6.84201C12.6822 7.24068 11.9848 8.21534 12.0002 9.33334V10C9.83683 10.0553 7.91016 9.07001 6.66683 7.33334C6.66683 7.33334 3.87883 12.2887 9.3335 14.6667C8.0855 15.498 6.84083 16.0587 5.3335 16C7.53883 17.202 9.94216 17.6153 12.0228 17.0113C14.4095 16.318 16.3708 14.5293 17.1235 11.85C17.348 11.0351 17.4595 10.1932 17.4548 9.34801C17.4535 9.18201 18.4615 7.50001 18.6668 6.67268V6.67334Z" />
+                                </svg></a>
+                            <a target="_blank"
+                                class="mx-1.5 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
+                                href="https://www.facebook.com/profile.php?id=100093851094281"><svg class="w-8 h-8"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7 10.2222V13.7778H9.66667V20H13.2222V13.7778H15.8889L16.7778 10.2222H13.2222V8.44444C13.2222 8.2087 13.3159 7.9826 13.4826 7.81591C13.6493 7.64921 13.8754 7.55556 14.1111 7.55556H16.7778V4H14.1111C12.9324 4 11.8019 4.46825 10.9684 5.30175C10.1349 6.13524 9.66667 7.2657 9.66667 8.44444V10.2222H7Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a target="_blank"
+                                class="mx-1.5 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
+                                href="https://www.instagram.com/smartdrink__/"><svg class="w-8 h-8" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.9294 7.72275C9.65868 7.72275 7.82715 9.55428 7.82715 11.825C7.82715 14.0956 9.65868 15.9271 11.9294 15.9271C14.2001 15.9271 16.0316 14.0956 16.0316 11.825C16.0316 9.55428 14.2001 7.72275 11.9294 7.72275Z"
+                                        stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M17.1343 4.61802H6.72412C4.91209 4.61802 3.44141 6.08869 3.44141 7.90073V17.184C3.44141 18.996 4.91209 20.4667 6.72412 20.4667H17.1343C18.9463 20.4667 20.417 18.996 20.417 17.184V7.90073C20.417 6.08869 18.9463 4.61802 17.1343 4.61802Z"
+                                        stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M17.8319 4.02296V6.21008" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 lg:w-1/2 lg:mx-6">
+                    <div
+                        class="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl lg:max-w-xl shadow-gray-300">
+                        <h1 class="text-lg font-medium text-gray-700">¿En qué podemos ayudarte?</h1>
+                        <form class="mt-6" action="https://formsubmit.co/smartdrinkk@gmail.com" method="POST">
+                            <div class="flex-1">
+                                <label class="block mb-2 text-sm text-gray-600">Nombre completo</label>
+                                <input type="text" name="name" required maxlength="30" placeholder="Nombre"
+                                    class="block w-full px-5 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border rounded-lg" />
+                            </div>
+                            <div class="flex-1 mt-6">
+                                <label class="block mb-2 text-sm text-gray-600">Correo electrónico</label>
+                                <input type="email" name="email" required maxlength="30"
+                                    placeholder="correo@hotmail.com"
+                                    class="block w-full px-5 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border rounded-lg" />
+                            </div>
+                            <div class="w-full mt-6">
+                                <label class="block mb-2 text-sm text-gray-600">Mensaje</label>
+                                <textarea name="subject" required maxlength="100"
+                                    class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border rounded-lg md:h-48"></textarea>
+                            </div>
+                            <button
+                                class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white border capitalize transition-colors duration-300 transform bg-black rounded-lg">Contactar</button>
+                            <input type="hidden" name="_next" value="http://localhost:5173/nosotros" />
+                            <input type="hidden" name="_captcha" value="false" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black lg:grid lg:grid-cols-5">
+        <div class="relative block h-32 lg:col-span-2 lg:h-full">
+            <img src="https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?cs=srgb&dl=pexels-isabella-mendes-340996.jpg&fm=jpg"
+                alt="" class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+        <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2" id="basico">
+                <div>
+                    <p>
+                        <span class="text-xs uppercase tracking-wide text-white">¿Tienes dudas?</span>
+                        <span class="block text-2xl font-medium text-white sm:text-3xl"><a
+                                href="/nosotros#Contacto">Contáctanos</a></span>
+                    </p>
+                    <ul class="mt-8 space-y-1 text-sm">
+                        <li class="text-white">Lunes a Viernes de 10:00am a 05:00 pm</li>
+                        <li class="text-white">Fin de semana : 11:00 am a 03:00 pm</li>
+                    </ul>
+                    <ul class="mt-8 flex gap-6">
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100093851094281" rel="noreferrer"
+                                target="_blank" class="text-white transition hover:opacity-75">
+                                <span class="sr-only">Facebook</span>
+                                <svg class="h-6 w-6" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/smartdrink__/" rel="noreferrer" target="_blank"
+                                class="text-white transition hover:opacity-75">
+                                <span class="sr-only">Instagram</span>
+                                <svg class="h-6 w-6" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.31.975.975 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.31-3.608C4.518 2.499 5.785 2.226 7.151 2.163 8.417 2.105 8.797 2.093 12 2.093zm0-2.163C8.756 0 8.332.013 7.052.072 5.775.132 4.607.415 3.513 1.509 2.42 2.603 2.137 3.771 2.077 5.048 2.019 6.328 2.006 6.752 2.006 12s.013 5.672.072 6.952c.06 1.277.343 2.445 1.437 3.539 1.094 1.094 2.262 1.377 3.539 1.437 1.28.059 1.704.072 6.952.072s5.672-.013 6.952-.072c1.277-.06 2.445-.343 3.539-1.437 1.094-1.094 1.377-2.262 1.437-3.539.059-1.28.072-1.704.072-6.952s-.013-5.672-.072-6.952c-.06-1.277-.343-2.445-1.437-3.539C20.693.415 19.525.132 18.248.072 16.968.013 16.544 0 12.001 0zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-medium text-white">Enlaces rápidos</p>
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li><a href="/" class="text-white transition hover:opacity-75">Inicio</a></li>
+                        <li><a href="/servicios" class="text-white transition hover:opacity-75">Servicios</a></li>
+                        <li><a href="/productos" class="text-white transition hover:opacity-75">Productos</a></li>
+                        <li><a href="/nosotros" class="text-white transition hover:opacity-75">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-medium text-white">Nosotros</p>
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li><a href="/nosotros" class="text-white transition hover:opacity-75">Quienes somos</a></li>
+                        <li><a href="/nosotros" class="text-white transition hover:opacity-75">Misión</a></li>
+                        <li><a href="/nosotros" class="text-white transition hover:opacity-75">Visión</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-100 pt-4">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <p class="mt-8 text-xs text-gray-500 sm:mt-0">&copy; 2023. Javatec. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
